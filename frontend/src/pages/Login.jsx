@@ -332,9 +332,7 @@ export default function Login() {
 
               onSuccess={() => {
 
-                window.location.href =
-
-                'http://localhost:8000/api/auth/google/login'
+                window.location.href = `${import.meta.env.VITE_API_URL}/api/auth/google/login`
 
               }}
 
