@@ -106,6 +106,7 @@ async def google_callback(request: Request, db: Session = Depends(get_db)):
         db.refresh(user)
 
     access_token = create_access_token({"sub": str(user.id)})
+    from app.core.config import settings
     return RedirectResponse(
-        url=f"http://localhost:5173/google-success?token={access_token}&username={user.username}&is_admin={str(user.is_admin).lower()}"
+        url=f"{settings.FRONTEND_URL}/google-success?token={access_token}&username={user.username}&is_admin={str(user.is_admin).lower()}"
     )
