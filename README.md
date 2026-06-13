@@ -1,3 +1,7 @@
+## System Architecture
+
+![Eco Park Architecture](ecopark.png)
+
 # 🌿 Eco Park — Full Stack Ticket Booking App
 
 A production-ready full-stack web application for booking tickets to Eco Park Kolkata.
